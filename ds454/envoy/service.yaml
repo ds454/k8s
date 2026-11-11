@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: envoy-service
   annotations:
-    traefik.ingress.kubernetes.io/service.serverscheme: h2s
+    traefik.ingress.kubernetes.io/service.serverscheme: h2c
 spec:
   selector:
     app: envoy
