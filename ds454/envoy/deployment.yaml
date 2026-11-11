@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: envoy
+spec:
+  serviceName: envoy-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: envoy
+  template:
+    metadata:
+      labels:
+        app: envoy
+    spec:
+      containers:
+      - name: envoy
+        image: ghcr.io/ds454/entry:latest
+        envFrom:
+        - configMapResource:
+            name: envoy-config
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
