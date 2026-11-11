@@ -8,7 +8,7 @@ data:
   SESSION_TOKEN_KEY: x-session-token
   ENABLE_REFLECTION: "0"
 
-  REDIS_HOST: auth-redis
+  REDIS_HOST: auth-redis-service
   REDIS_PORT: "6379"
   REDIS_DB: "1"
   REDIS_PASSWORD: ds454
