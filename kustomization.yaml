@@ -2,6 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ds454/ingress.yaml
+- ds454/common.yaml
 
 - ds454/envoy/config.yaml
 - ds454/envoy/deployment.yaml
