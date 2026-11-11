@@ -7,7 +7,7 @@ data:
 
   # Auth routing config
   AUTH_SERVICE_CONTEXT_PATH: /ds454.locomotive.auth.v0_0_0.Auth/
-  AUTH_SERVICE_HOSTNAME: auth
+  AUTH_SERVICE_HOSTNAME: auth-service
   AUTH_SERVICE_PORT: 50051
   AUTH_SERVICE_LOGIN_PATH: Login
   AUTH_SERVICE_HEALTH_METHOD: tcp
