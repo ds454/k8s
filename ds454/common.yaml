@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: common-config
+data:
+  UUID_METADATA_KEY: x-uuid
+  STEAMID_METADATA_KEY: x-steamid
