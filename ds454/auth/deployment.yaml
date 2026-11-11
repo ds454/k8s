@@ -19,6 +19,5 @@ spec:
         envFrom:
         - configMapRef:
             name: auth-config
-        imagePullPolicy: Always
         ports:
         - containerPort: 50051
