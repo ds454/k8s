@@ -16,9 +16,9 @@ spec:
       containers:
       - name: envoy
         image: ghcr.io/ds454/entry:latest
-        envFrom:
-        - configMapResource:
-            name: envoy-config
         imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: envoy-config
         ports:
         - containerPort: 80
