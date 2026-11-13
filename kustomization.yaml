@@ -8,6 +8,10 @@ resources:
 - ds454/envoy/deployment.yaml
 - ds454/envoy/service.yaml
 
+- ds454/user-service/config.yaml
+- ds454/user-service/deployment.yaml
+- ds454/user-service/service.yaml
+
 - ds454/auth/config.yaml
 - ds454/auth/deployment.yaml
 - ds454/auth/service.yaml
