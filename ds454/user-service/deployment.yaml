@@ -21,8 +21,6 @@ spec:
         - configMapRef:
             name: user-config
         - configMapRef:
-            name: user-postgresql-config
-        - configMapRef:
             name: common-config
         ports:
         - containerPort: 50051
@@ -31,4 +29,4 @@ spec:
         imagePullPolicy: IfNotPresent
         envFrom:
         - configMapRef:
-            name: user-postgresql-config
+            name: user-config
