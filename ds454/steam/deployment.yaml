@@ -18,9 +18,10 @@ spec:
         imagePullPolicy: Always
         env:
         - name: STEAM_WEBAPI_TOKEN
-          secretKeyRef:
-            name: steam-api-key
-            key: key
+          valueFrom:
+            secretKeyRef:
+              name: steam-api-key
+              key: key
         envFrom:
         - configMapRef:
             name: steam-config
