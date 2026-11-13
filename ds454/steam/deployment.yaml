@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: steam
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: steam
+  template:
+    metadata:
+      labels:
+        app: steam
+    spec:
+      containers:
+      - name: steam
+        image: ghcr.io/ds454/steam-service:latest
+        imagePullPolicy: Always
+        env:
+        - name: STEAM_WEBAPI_TOKEN
+          secretKeyRef:
+            name: steam-api-key
+            key: key
+        envFrom:
+        - configMapRef:
+            name: steam-config
+        - configMapRef:
+            name: common-config
+        ports:
+        - containerPort: 50051

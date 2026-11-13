@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: steam-config
+data:
+  STEAM_WEBAPI_HOST: https://api.steampowered.com
+  STEAM_WEBAPI_FORMAT: json
+  STEAM_STOREAPI_HOST: https://store.steampowered.com
+  STEAM_STOREAPI_CONTEXT: /api
+  ROOT_LOGLEVEL: DEBUG
+  GRPC_LOGLEVEL: INFO
+  STEAMSERVICE_LOGLEVEL: DEBUG
+  GRPC_PORT: "50051"
