@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-config
+data:
+  GRPC_PORT: "50051"
+  POSTGRES_USER: userapi
+  POSTGRES_PASSWORD: userapi
+  POSTGRES_DB: userapi
+  PGPORT: "5432"
+  DBHOST: localhost
