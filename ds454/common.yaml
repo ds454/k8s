@@ -9,7 +9,7 @@ data:
   STEAM_SERVICE_HOST: steam-service
   STEAM_SERVICE_PORT: "50051"
   
-  USER_SERVICE_HOST: user-api
+  USER_SERVICE_HOST: user-service
   USER_SERVICE_PORT: "50051"
   
   GAME_SERVICE_HOST: game-api
