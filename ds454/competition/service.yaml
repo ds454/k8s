@@ -4,7 +4,7 @@ metadata:
   name: competition-service
 spec:
   selector:
-    app: user
+    app: competition
   ports:
   - protocol: TCP
     port: 50051
