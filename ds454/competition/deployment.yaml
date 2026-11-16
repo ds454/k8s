@@ -22,6 +22,8 @@ spec:
             name: competition-config
         - configMapRef:
             name: common-config
+        - secretRef:
+            name: competition-db-init-creds
         ports:
         - containerPort: 50051
       - name: mongo
