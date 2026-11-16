@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: competition
+spec:
+  serviceName: competition-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: competition
+  template:
+    metadata:
+      labels:
+        app: competition
+    spec:
+      containers:
+      - name: competition-service
+        image: ghcr.io/ds454/competition:latest
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: competition-config
+        - configMapRef:
+            name: common-config
+        ports:
+        - containerPort: 50051
+      - name: mongo
+        image: mongo:8.0.4
+        imagePullPolicy: IfNotPresent
+        envFrom:
+        - configMapRef:
+            name: competition-config
+        - secretRef:
+            name: competition-db-init-creds

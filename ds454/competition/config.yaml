@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: competition-config
+data:
+  GRPC_PORT: "50051"
+
+  COMPETITION_NAME_MAX_LEN: "32"
+  COMPETITION_MIN_LEN_SEC: "86400"
+  COMPETITION_MAX_LEN_SEC: "31536000"
+
+  # 0 if a user can only accept competitions that have yet to start
+  # 1 if a user can accept competitions that have already started
+  ACCEPT_INVITATION_CONDITION: "1"
+
+  MONGO_DB: ds454
+  MONGO_PORT: "27017"
+  DBHOST: competition-db

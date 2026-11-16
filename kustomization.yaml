@@ -12,6 +12,10 @@ resources:
 - ds454/user/deployment.yaml
 - ds454/user/service.yaml
 
+- ds454/competition/config.yaml
+- ds454/competition/deployment.yaml
+- ds454/competition/service.yaml
+
 - ds454/steam/config.yaml
 - ds454/steam/deployment.yaml
 - ds454/steam/service.yaml
